@@ -26,75 +26,31 @@ $response = mysqli_query($connection, $sql);
 <head>
     <meta charset="UTF-8">
     <title>Resultado del Registro</title>
-    <!-- Estilos, como no son muchos, se los agrega acá y no en otro fichero .css -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 40px;
-        }
-
-        .container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 500px;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #27ae60;
-        }
-
-        p {
-            margin: 10px 0;
-        }
-
-        .error {
-            color: red;
-            font-weight: bold;
-        }
-
-        .btn {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 10px 20px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .btn:hover {
-            background: #2980b9;
-        }
-    </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
-    <!-- Contenedor que muestra los datos del alumno agregado -->
-    <div class="container">
+<body class="registro-body">
+    <div class="registro-container">
         <!-- Usamos un condicional para comprobar si la variable response es true (o sea,
         si la consulta para insertar el alumno en la bd fue exitosa) -->
+
         <?php if ($response): ?>
-            <h2>¡Alumno registrado exitosamente!</h2>
-            <!-- Se usa htmlspecialchars() para evitar que se ejecute código malicioso 
-            si el usuario escribe <script> o HTML en los inputs -->
-            <p><strong>Nombre y apellido:</strong> <?= htmlspecialchars($name) ?></p>
-            <p><strong>DNI:</strong> <?= htmlspecialchars($dni) ?></p>
-            <p><strong>Sexo:</strong> <?= htmlspecialchars($sex) ?></p>
-            <p><strong>Fecha de nacimiento:</strong> <?= htmlspecialchars($fechaNacimiento) ?></p>
-            <p><strong>Ciudad:</strong> <?= htmlspecialchars($ciudad) ?></p>
-            <p><strong>Correo:</strong> <?= htmlspecialchars($correo) ?></p>
+            <h2 class="registro-exito">¡Alumno registrado exitosamente!</h2>
+            <p class="registro-dato"><strong>Nombre y apellido:</strong> <?= $name ?></p>
+            <p class="registro-dato"><strong>DNI:</strong> <?= $dni ?></p>
+            <p class="registro-dato"><strong>Sexo:</strong> <?= $sex ?></p>
+            <p class="registro-dato"><strong>Fecha de nacimiento:</strong> <?= $fechaNacimiento ?></p>
+            <p class="registro-dato"><strong>Ciudad:</strong> <?= $ciudad ?></p>
+            <p class="registro-dato"><strong>Correo:</strong> <?= $correo ?></p>
             <!-- Ahora si falló la consulta, muestra un mensaje de error -->
+
         <?php else: ?>
-            <p class="error">Error al registrar el alumno</p>
-        <!-- En php hay que terminar con el condicional con endif -->
+            <p class="registro-error">Error al registrar el alumno</p>
+            <!-- En php hay que terminar con el condicional con endif -->
+
         <?php endif; ?>
-        <!-- Botón para volver a inicio -->
-        <a class="btn" href="../index.html">Volver al inicio</a>
+
+        <a class="registro-btn-volver" href="../index.html">Volver al inicio</a>
     </div>
 </body>
 
