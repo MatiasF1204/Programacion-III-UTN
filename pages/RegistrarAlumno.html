@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar Alumno</title>
+    <link rel="stylesheet" href="../styles/RegistrarAlumno.css" />
+  </head>
+
+  <body>
+    <main>
+      <form
+        action="../php/RegistrarAlumno.php"
+        method="post"
+        aria-labelledby="form-title"
+      >
+        <h1 id="form-title">Registrar Alumno</h1>
+        
+        <div class="form-group">
+          <label for="nameComplete">Nombre completo:</label>
+          <input type="text" name="nameComplete" id="nameComplete" required />
+        </div>
+
+        <div class="form-group">
+          <label for="dni">DNI:</label>
+          <input type="number" name="dni" id="dni" min="0" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="sex">Sexo:</label>
+          <select name="sex" id="sex" required>
+            <option value="" disabled selected>-- Seleccione sexo --</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fechaNacimiento">Fecha de nacimiento:</label>
+          <input
+            type="date"
+            name="fechaNacimiento"
+            id="fechaNacimiento"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="city">Ciudad de nacimiento:</label>
+          <select name="city" id="city" required>
+            <option value="" disabled selected>-- Seleccione ciudad --</option>
+            <option value="Río Grande">Río Grande</option>
+            <option value="Tolhuin">Tolhuin</option>
+            <option value="Ushuaia">Ushuaia</option>
+          </select>
+        </div>
+
+        <button type="submit">Enviar</button>
+        <a class="btn-volver" href="../index.html">Volver</a>
+      </form>
+    </main>
+  </body>
+</html>
