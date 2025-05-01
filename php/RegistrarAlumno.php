@@ -26,7 +26,8 @@ $response = mysqli_query($connection, $sql);
 <head>
     <meta charset="UTF-8">
     <title>Resultado del Registro</title>
-    <link rel="stylesheet" href="../style.css">
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="../styles.css" />
 </head>
 
 <body class="registro-body">
