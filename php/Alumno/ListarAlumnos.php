@@ -1,5 +1,5 @@
 <?php
-include './Conexiones.php';
+include '../Conexiones.php';
 
 // Consulta SQL para obtener todos los alumnos de la tabla
 $sql = "SELECT * FROM alumno";
@@ -19,7 +19,7 @@ $cantidad_registros = mysqli_num_rows($resultado_consulta);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listar Alumnos</title>
     <!-- Enlace al archivo de estilos CSS -->
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../../styles.css" />
 </head>
 
 <body class="pagina-listado">
@@ -60,8 +60,8 @@ $cantidad_registros = mysqli_num_rows($resultado_consulta);
                             <td><?= $row['ciudad'] ?></td>
                             <!-- Redirije a la página ModificaAlumno.php enviando el id del alumno como parámetro -->
                             <td><a class="btn-modificar" href="./ModificarAlumno.php?id=<?= $row['id'] ?>">Modificar</a></td>
-                            <td><a class="btn-eliminar" href="">Eliminar</a></td>
-                        </tr>
+                            <td><a class="btn-eliminar" href="./EliminarAlumno.php?id=<?= $row['id'] ?>">Eliminar</a></td>
+                            </tr>
                     <?php endwhile; ?>
                     <!-- En caso de que no haya registros, mostramos lo siguiente -->
                 <?php else: ?>
@@ -71,7 +71,7 @@ $cantidad_registros = mysqli_num_rows($resultado_consulta);
         </table>
         <!-- Botón para volver al menú principal -->
         <div class="volver-inicio">
-            <a class="btn-volver" href="../index.html">Volver al inicio</a>
+            <a class="btn-volver" href="../../index.html">Volver al inicio</a>
         </div>
     </div>
 </body>

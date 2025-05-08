@@ -1,5 +1,5 @@
 <?php
-include './Conexiones.php';
+include '../Conexiones.php';
 
 // Recibimos los datos del formulario
 $id = $_POST['id'];

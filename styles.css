@@ -182,3 +182,33 @@ nav a:hover {
 .registro-btn-volver:hover {
   background: #2980b9;
 }
+
+/* ESTILOS DE ELIMINAR ALUMNO -------------------- */
+.contenedor-mensaje {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.mensaje {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.mensaje-exito {
+  background-color: #e6f9f0;
+  color: #2e7d32;
+  border-left: 6px solid #2e7d32;
+}
+
+.mensaje-error {
+  background-color: #fdecea;
+  color: #c0392b;
+  border-left: 6px solid #c0392b;
+}
+

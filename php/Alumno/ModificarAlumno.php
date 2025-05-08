@@ -1,5 +1,5 @@
 <?php
-include './Conexiones.php';
+include '../Conexiones.php';
 
 // Verificamos que el ID no sea nulo con isset, y obtenemos el id con GET
 if (isset($_GET['id'])) {
@@ -29,7 +29,7 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modificar Alumno</title>
-    <link rel="stylesheet" href="../styles/RegistrarAlumno.css" />
+    <link rel="stylesheet" href="../../styles/Formularios.css" />
 </head>
 
 <body>

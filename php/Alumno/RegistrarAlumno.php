@@ -1,6 +1,6 @@
 <?php
 // Importamos el archivo que tiene la lógica para conectar a la bd
-include './Conexiones.php';
+include '../Conexiones.php';
 
 // Tomamos los valores que ingresó el usuario en el formulario y 
 // los guardamos en variables
@@ -27,7 +27,7 @@ $response = mysqli_query($connection, $sql);
     <meta charset="UTF-8">
     <title>Resultado del Registro</title>
     <!-- Enlace al archivo de estilos CSS -->
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../../styles.css" />
 </head>
 
 <body class="registro-body">
@@ -48,10 +48,9 @@ $response = mysqli_query($connection, $sql);
         <?php else: ?>
             <p class="registro-error">Error al registrar el alumno</p>
             <!-- En php hay que terminar con el condicional con endif -->
-
         <?php endif; ?>
 
-        <a class="registro-btn-volver" href="../index.html">Volver al inicio</a>
+        <a class="registro-btn-volver" href="../../index.html">Volver al inicio</a>
     </div>
 </body>
 
