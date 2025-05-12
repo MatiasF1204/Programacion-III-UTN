@@ -61,7 +61,7 @@ $cantidad_registros = mysqli_num_rows($resultado_consulta);
                             <!-- Redirije a la página ModificaAlumno.php enviando el id del alumno como parámetro -->
                             <td><a class="btn-modificar" href="./ModificarAlumno.php?id=<?= $row['id'] ?>">Modificar</a></td>
                             <td><a class="btn-eliminar" href="./EliminarAlumno.php?id=<?= $row['id'] ?>">Eliminar</a></td>
-                            </tr>
+                        </tr>
                     <?php endwhile; ?>
                     <!-- En caso de que no haya registros, mostramos lo siguiente -->
                 <?php else: ?>

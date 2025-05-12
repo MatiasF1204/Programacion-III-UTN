@@ -19,16 +19,16 @@ include '../Conexiones.php';
 
         if (mysqli_query($connection, $sql)) {
             echo "<div class='mensaje mensaje-exito'>";
-            echo "<h2>✅ Alumno eliminado correctamente.</h2>";
+            echo "<h2>Alumno eliminado correctamente.</h2>";
             echo "</div>";
         } else {
             echo "<div class='mensaje mensaje-error'>";
-            echo "<h2>❌ Error al eliminar el alumno: " . mysqli_error($connection) . "</h2>";
+            echo "<h2>Error al eliminar el alumno: " . mysqli_error($connection) . "</h2>";
             echo "</div>";
         }
     } else {
         echo "<div class='mensaje mensaje-error'>";
-        echo "<h2>⚠️ ID de alumno no proporcionado.</h2>";
+        echo "<h2>ID de alumno no proporcionado.</h2>";
         echo "</div>";
     }
     ?>

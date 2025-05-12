@@ -1,15 +1,26 @@
+<?php
+include '../Conexiones.php';
+
+$id = $_GET['id'];
+$sql = "SELECT * FROM materias WHERE id = $id";
+$resultado = mysqli_query($connection, $sql);
+$materia = mysqli_fetch_assoc($resultado);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agregar Materia</title>
-    <link rel="stylesheet" href="../styles/Formularios.css" />
+    <link rel="stylesheet" href="../../styles/Formularios.css" />
   </head>
   <body>
     <main>
-      <form action="../php/Materia/RegistrarMateria.php" method="post" aria-labelledby="form-title">
+      <form action="./ActualizarMateria.php" method="post" aria-labelledby="form-title">
         <h1 id="form-title">Agregar Materia</h1>
+
+        <input type="hidden" name="id" value="<?= $materia['id'] ?>">
 
         <div class="form-group">
           <label for="nombre">Nombre de materia:</label>
@@ -36,7 +47,6 @@
             id="cuatri"
             required
             maxlength="1"
-            min="0"
           />
         </div>
 
@@ -50,7 +60,7 @@
         </div>
 
         <button type="submit">Enviar</button>
-        <a class="btn-volver" href="../index.html">Volver</a>
+        <a class="btn-volver" href="../../index.html">Volver</a>
       </form>
     </main>
   </body>
