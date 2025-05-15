@@ -9,10 +9,10 @@ $sql = "DELETE FROM materias
 $respuesta = mysqli_query($connection, $sql);
 
 if ($respuesta) {
-    echo "Alumno eliminado exitosamente.";
-    echo '<a href="../../index.html">Volver a Inicio</a>';
+    echo "Materia eliminada exitosamente.";
+    echo '<br> <a href="../../index.html">Volver a Inicio</a>';
 } else {
-    echo "Error al eliminar alumno: " . mysqli_error($connection);
+    echo "Error al eliminar materia: " . mysqli_error($connection);
 }
 ?>
 
