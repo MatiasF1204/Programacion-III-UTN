@@ -27,7 +27,6 @@ if ($nota1 >= 6 && $nota2 >= 6 && $final >= 6 && $asistencia >= 75) {
     $estado = "Desaprobado";
 }
 
-
 $sql = "INSERT INTO cursada (
             id_materia,
             id_alumno, 
