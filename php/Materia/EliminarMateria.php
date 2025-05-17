@@ -3,7 +3,7 @@ include '../Conexiones.php';
 
 $id = $_GET['id'];
 
-$sql_validar = "SELECT * FROM curasada
+$sql_validar = "SELECT * FROM cursada
                 WHERE id_materia = $id";
 
 $resultado_validar = mysqli_query($connection, $sql_validar);
